@@ -2,7 +2,7 @@
 This repository is the starter code for Assignment 2 - Grid Maker.
 
 ### Live Link
-[Website link](https://johnnylaicode.github.io/grid-maker-starter-code/)
+[Website link](https://jinlin6398.github.io/Assignment-2---Grid-Maker/)
 
 ----------
 ### 1. Use the following process to ***import*** the Assignment 2 starter code repository to your GitHub account as the starter codebase
