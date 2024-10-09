@@ -6,21 +6,47 @@ let colorSelected;
 // Add a row
 function addR() {
     alert("Clicked Add Row"); // Replace this line with your code.
+
+    cell.onclick = () => colorCell(cell);  // Helper Function - click to color the cell (single)
 }
 
 // Add a column
 function addC() {
     alert("Clicked Add Col"); // Replace this line with your code.
+
+    cell.onclick = () => colorCell(cell);  // Helper Function - click to color the cell (single)
 }
 
 // Remove a row
 function removeR() {
-    alert("Clicked Remove Row"); // Replace this line with your code.
+    if (numRows > 0) 
+    {
+        let grid = document.getElementById("grid");
+        grid.deleteRow(-1); // Remove the last row
+        numRows--; // Decrement row count
+    }
 }
 
 // Remove a column
 function removeC() {
-    alert("Clicked Remove Col"); // Replace this line with your code.
+    if (numCols > 0) 
+        {
+        let grid = document.getElementById("grid");
+        let rows = grid.rows;
+        numCols--; // Decrement column count
+
+        // Loop through all rows and remove the last cell
+        for (let i = 0; i < numRows; i++) {
+            rows[i].deleteCell(-1);
+        }
+    }
+}
+
+//Color a single cell
+function colorCell(cell) {
+    if (colorSelected !== "SELECT") {
+        cell.style.backgroundColor = colorSelected;
+    }
 }
 
 // Set global variable for selected color
