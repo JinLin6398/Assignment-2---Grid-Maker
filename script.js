@@ -1,21 +1,47 @@
 // Declare global variables
-let numRows = 0;
-let numCols = 0;
+let numRows = 2;
+let numCols = 3;
 let colorSelected; 
+
 
 // Add a row
 function addR() {
-    alert("Clicked Add Row"); // Replace this line with your code.
+    //alert("Clicked Add Row"); // Replace this line with your code.
+    let grid = document.getElementById("grid");
+    let newRow = grid.insertRow(); 
+    numRows++; 
 
-    cell.onclick = () => colorCell(cell);  // Helper Function - click to color the cell (single)
+
+    for(let i = 0;i<numCols;i++){
+        let cell = newRow.insertCell();
+        cell.onclick = () => colorCell(cell);  // Helper Function - click to color the cell (single)
+    }
+
+     // If no cols exist yet, add the first cols
+    if(numCols ==0){
+        addC();
+    }
 }
 
 // Add a column
 function addC() {
-    alert("Clicked Add Col"); // Replace this line with your code.
+    //alert("Clicked Add Col"); // Replace this line with your code.
+    let grid = document.getElementById("grid");
+    let rows = grid.rows;
+    numCols++; 
 
-    cell.onclick = () => colorCell(cell);  // Helper Function - click to color the cell (single)
-}
+
+    for (let i = 0; i < numRows; i++) {
+        let cell = rows[i].insertCell();
+        cell.onclick = () => colorCell(cell);  // Helper Function - click to color the cell (single)
+    }
+
+     // If no rows exist yet, add the first row
+    if(numRows ==0){
+        addR();
+    }
+
+   }
 
 // Remove a row
 function removeR() {
@@ -67,5 +93,14 @@ function fillAll(){
 
 // Clear all cells
 function clearAll(){
-    alert("Clicked Clear All"); // Replace this line with your code.
+    let grid = document.getElementById("grid");
+    let rows = grid.rows;
+
+    for(let i=0;i<numRows;i++){
+        let cell = rows[i].cells;
+
+        for(let j=0;j<numCols;j++){
+            cell[j].style.backgroundColor = "";
+        }
+    }
 }
