@@ -1,9 +1,49 @@
-tr,td{
-    border:1px;
+body {
+    background-color: rgb(42, 45, 61);
+    font-family: 'Gill Sans', 'Noto Sans', sans-serif;
+}
+
+tr,td {
+    border: 2px;
     border-style: solid;
 }
-td{
+td {
     height: 50px;
     width: 50px;
-    background-color: white;
+    background-color: rgb(231, 233, 235);
+    border-radius: 5px;
+    border-style: outset;
+    cursor: pointer;
+}
+
+.topsection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    background-color: rgb(28, 30, 42);
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    color: rgb(231, 233, 235);
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: rgb(76, 167, 114);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+select {
+    color: rgb(231, 233, 235);
+    padding: 10px 15px;
+    font-size: 20px;
+    background-color: rgb(76, 167, 114);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
 }
