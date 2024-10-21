@@ -1,5 +1,5 @@
 # Practical-Web-Development - Assignent 2 Grid Maker
-[Grid Maker](https://jinlin6398.github.io/Zoo-Project/)
+[Grid Maker](https://jinlin6398.github.io/Assignment-2---Grid-Maker/)
 
 ## Team Members:
 - Jin Lin (JinLin6398)
