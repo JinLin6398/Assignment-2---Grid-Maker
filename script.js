@@ -12,7 +12,7 @@ function addR() {
     numRows++; 
 
 
-    for(let i = 0;i<numCols;i++){
+    for(let i = 0; i < numCols; i++){
         let cell = newRow.insertCell();
         cell.onclick = () => colorCell(cell);  // Helper Function - click to color the cell (single)
     }
@@ -57,13 +57,13 @@ function removeR() {
 function removeC() {
     if (numCols > 0) 
         {
-        let grid = document.getElementById("grid");
-        let rows = grid.rows;
-        numCols--; // Decrement column count
+            let grid = document.getElementById("grid");
+            let rows = grid.rows;
+            numCols--; // Decrement column count
 
-        // Loop through all rows and remove the last cell
-        for (let i = 0; i < numRows; i++) {
-            rows[i].deleteCell(-1);
+            // Loop through all rows and remove the last cell
+            for (let i = 0; i < numRows; i++) {
+                rows[i].deleteCell(-1);
         }
     }
 }
@@ -88,7 +88,16 @@ function fillU(){
 
 // Fill all cells
 function fillAll(){
-    alert("Clicked Fill All"); // Replace this line with your code.
+    let grid = document.getElementById("grid");
+    let rows = grid.rows;
+
+    for(let i = 0; i < numRows; i++){
+        let cell = rows[i].cells;
+
+        for(let j = 0; j < numCols; j++){
+            colorCell(rows[i].cells[j]);
+        }
+    }
 }
 
 // Clear all cells
