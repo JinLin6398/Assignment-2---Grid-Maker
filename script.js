@@ -9,6 +9,11 @@ function addR() {
     //alert("Clicked Add Row"); // Replace this line with your code.
     let grid = document.getElementById("grid");
     let newRow = grid.insertRow(); 
+    if(numRows < 1){
+        while(numCols > 1){
+            removeC();
+        }
+    }
     numRows++; 
 
 
@@ -28,6 +33,11 @@ function addC() {
     //alert("Clicked Add Col"); // Replace this line with your code.
     let grid = document.getElementById("grid");
     let rows = grid.rows;
+    if(numCols < 1){
+        while(numRows > 1){
+            removeR();
+        }
+    }
     numCols++; 
 
 
