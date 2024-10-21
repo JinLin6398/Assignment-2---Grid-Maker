@@ -18,7 +18,7 @@ function addR() {
     }
 
      // If no cols exist yet, add the first cols
-    if(numCols ==0){
+    if(numCols == 0){
         addC();
     }
 }
@@ -37,7 +37,7 @@ function addC() {
     }
 
      // If no rows exist yet, add the first row
-    if(numRows ==0){
+    if(numRows == 0){
         addR();
     }
 
@@ -76,14 +76,25 @@ function colorCell(cell) {
 }
 
 // Set global variable for selected color
-function selectColor(){
+function selectColor() {
     colorSelected = document.getElementById("selectedColorId").value;
     console.log(colorSelected);
 }
 
 // Fill all uncolored cells
 function fillU(){
-    alert("Clicked Fill All Uncolored"); // Replace this line with your code.
+    let grid = document.getElementById("grid");
+    let rows = grid.rows;
+
+    for(let i = 0; i < numRows; i++) {
+        let cell = rows[i].cells;
+
+        for(let j = 0; j < numCols; j++) {
+            if(rows[i].cells[j].style.backgroundColor == "") { // Checks if cells has not yet been colored
+                colorCell(rows[i].cells[j]);
+            }
+        }
+    }
 }
 
 // Fill all cells
@@ -91,11 +102,11 @@ function fillAll(){
     let grid = document.getElementById("grid");
     let rows = grid.rows;
 
-    for(let i = 0; i < numRows; i++){
+    for(let i = 0; i < numRows; i++) {
         let cell = rows[i].cells;
 
-        for(let j = 0; j < numCols; j++){
-            colorCell(rows[i].cells[j]);
+        for(let j = 0; j < numCols; j++) {
+            colorCell(rows[i].cells[j]);  
         }
     }
 }
@@ -105,10 +116,10 @@ function clearAll(){
     let grid = document.getElementById("grid");
     let rows = grid.rows;
 
-    for(let i=0;i<numRows;i++){
+    for(let i = 0; i < numRows;i++) {
         let cell = rows[i].cells;
 
-        for(let j=0;j<numCols;j++){
+        for(let j = 0; j < numCols; j++) {
             cell[j].style.backgroundColor = "";
         }
     }
