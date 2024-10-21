@@ -54,6 +54,7 @@ function addC() {
    }
 
 // Remove a row
+// User Story 1: Remove Row
 function removeR() {
     if (numRows > 0) 
     {
