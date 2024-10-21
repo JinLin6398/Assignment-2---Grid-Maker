@@ -65,6 +65,7 @@ function removeR() {
 }
 
 // Remove a column
+// User Story 1: Remove Column
 function removeC() {
     if (numCols > 0) 
         {
