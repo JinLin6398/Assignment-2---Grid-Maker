@@ -121,7 +121,7 @@ function fillAll(){
     }
 }
 
-// Clear all cells
+// Clear all cells of their color
 function clearAll(){
     let grid = document.getElementById("grid");
     let rows = grid.rows;
@@ -132,5 +132,15 @@ function clearAll(){
         for(let j = 0; j < numCols; j++) {
             cell[j].style.backgroundColor = "";
         }
+    }
+}
+
+// Clear all cells off the screen
+function clearAllCells() {
+    if(numRows !== 0) {
+        for (let a = numRows; a > 0; a--) { removeR(); }
+    }
+    if(numCols !== 0) {
+        for (let b = numCols; b > 0; b--) { removeC(); }
     }
 }
