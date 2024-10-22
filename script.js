@@ -5,6 +5,7 @@ let colorSelected;
 
 
 // Add a row
+// User Story 1: Add Row
 function addR() {
     //alert("Clicked Add Row"); // Replace this line with your code.
     let grid = document.getElementById("grid");
