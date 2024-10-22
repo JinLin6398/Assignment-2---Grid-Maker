@@ -83,6 +83,7 @@ function removeC() {
 }
 
 //Color a single cell
+// User Story 2: Color Single Cell
 function colorCell(cell) {
     if (colorSelected !== "SELECT") {
         cell.style.backgroundColor = colorSelected;
@@ -96,6 +97,7 @@ function selectColor() {
 }
 
 // Fill all uncolored cells
+// User Story 2: Color All Uncolored Cells
 function fillU(){
     let grid = document.getElementById("grid");
     let rows = grid.rows;
@@ -112,6 +114,7 @@ function fillU(){
 }
 
 // Fill all cells
+// User Story 2: Color All Cells
 function fillAll(){
     let grid = document.getElementById("grid");
     let rows = grid.rows;
@@ -126,6 +129,7 @@ function fillAll(){
 }
 
 // Clear all cells of their color
+// User Story 3: Clear Cells Color
 function clearAll(){
     let grid = document.getElementById("grid");
     let rows = grid.rows;
@@ -140,6 +144,7 @@ function clearAll(){
 }
 
 // Clear all cells off the screen
+// User Story 3: Clear All Cells
 function clearAllCells() {
     if(numRows !== 0) {
         for (let a = numRows; a > 0; a--) { removeR(); }
