@@ -30,6 +30,7 @@ function addR() {
 }
 
 // Add a column
+// User Story 1: Add Column
 function addC() {
     //alert("Clicked Add Col"); // Replace this line with your code.
     let grid = document.getElementById("grid");
